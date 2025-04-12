@@ -1,25 +1,24 @@
-<script setup lang="ts">
-import TheWelcome from '@/components/TheWelcome.vue'
+<script lang="ts">
+import { defineComponent } from 'vue'
+import AuthLayout from '@/layout/AuthLayout.vue'
+import MainLayout from '@/layout/MainLayout.vue'
+
+export default defineComponent({
+  components: { AuthLayout, MainLayout },
+  data() {
+    return {
+      layout: this.$route.meta.layout
+    }
+  }
+})
 </script>
 
 <template>
-      <v-app theme="dark">
-
-        <v-navigation-drawer>
-          <v-btn to="/" text="Home"></v-btn>
-          <v-btn to="/auth" text="Auth"></v-btn>
-        </v-navigation-drawer>
-
-        <v-main>
-          <router-view v-slot="{ Component }">
-            <v-fade-transition hide-on-leave>
-              <component :is="Component" />
-            </v-fade-transition>
-          </router-view>
-        </v-main>
-      </v-app>
+  <v-app theme="dark">
+    <component :is="layout + '-layout'">
+      <slot />
+    </component>
+  </v-app>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

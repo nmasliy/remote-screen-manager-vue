@@ -2,12 +2,14 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Home'
+  name: 'AuthLayout',
 })
 </script>
 
 <template>
-  Home
+  <v-main>
+    Login
+  </v-main>
 </template>
 
 <style scoped>

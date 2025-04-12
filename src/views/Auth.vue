@@ -7,7 +7,7 @@ export default defineComponent({
 </script>
 
 <template>
-Auth...
+  Auth...
 </template>
 
 <style scoped>

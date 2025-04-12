@@ -2,12 +2,15 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Home'
+  name: 'TheSidebar'
 })
 </script>
 
 <template>
-  Home
+  <v-navigation-drawer>
+    <v-btn to="/" text="Home"></v-btn>
+    <v-btn to="/auth" text="Auth"></v-btn>
+  </v-navigation-drawer>
 </template>
 
 <style scoped>

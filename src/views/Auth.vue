@@ -2,14 +2,10 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Auth'
+  name: 'AppAuth',
 })
 </script>
 
-<template>
-  Auth...
-</template>
+<template>Auth...</template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

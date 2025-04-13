@@ -4,7 +4,7 @@ import TheSidebar from '@/components/layout/TheSidebar.vue'
 
 export default defineComponent({
   name: 'MainLayout',
-  components: { TheSidebar }
+  components: { TheSidebar },
 })
 </script>
 
@@ -12,10 +12,10 @@ export default defineComponent({
   <the-sidebar />
 
   <v-main>
-    <router-view />
+    <v-container>
+      <router-view />
+    </v-container>
   </v-main>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

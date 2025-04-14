@@ -1,15 +1,15 @@
 <script lang="ts">
+import Screens from '@/components/Screens.vue'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Home'
+  name: 'AppHome',
+  components: { Screens },
 })
 </script>
 
 <template>
-  Home
+  <Screens />
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

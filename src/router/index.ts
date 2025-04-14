@@ -1,12 +1,12 @@
 import { createWebHistory, createRouter } from 'vue-router'
-
+import { APP_ROUTES } from '@/shared/config/constants'
 import HomeView from '@/views/Home.vue'
 
 const routes = [
-  { path: '/', component: HomeView, meta: { layout: 'main' } },
-  { path: '/auth', component: () => import('@/views/Auth.vue'), meta: { layout: 'auth' } },
+  { path: APP_ROUTES.HOME, component: HomeView, meta: { layout: 'main' } },
+  { path: APP_ROUTES.AUTH, component: () => import('@/views/Auth.vue'), meta: { layout: 'auth' } },
   {
-    path: '/profile',
+    path: APP_ROUTES.PROFILE,
     component: () => import('@/views/Profile.vue'),
     meta: { layout: 'main', requireAuth: true },
   },
